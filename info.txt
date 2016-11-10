@@ -1,0 +1,76 @@
+**Hey fellow programmers**
+
+I'm currently failing on integrating an angular2 directive - installed with npm - in my angular cli project.
+
+**What I did so far:**
+
+I clone the following git repo: https://github.com/avatsaev/angular-cli-seed
+
+I was able to run the app with 'ng serve' without problems. Now, I want to use the Summernote WYSIWYG editor. Thank god, there is already an integration for angular 2 which can be found on the following page: https://www.npmjs.com/package/ng2-summernote
+
+I installed this via 'npm install ng2-summernote' in my projet directory. It also shows up in my 'node_modules'-folder.
+
+From now on, I dont know what to do. What i tried was the following code
+
+(home.module.ts)
+------------------------------------------------------------------
+import { NgModule } from "@angular/core";
+import { Ng2Summernote } from 'ng2-summernote/ng2-summernote';
+
+import { homeRouting } from "./home.routing";
+import { HomeComponent } from "./home.component";
+
+@NgModule({
+  imports: [
+    homeRouting
+  ],
+  declarations: [
+    HomeComponent,
+    Ng2Summernote
+  ]
+})
+export class HomeModule { }
+------------------------------------------------------------------
+
+(home.component.ts)
+------------------------------------------------------------------
+import { Component, OnInit } from '@angular/core';
+import { Ng2Summernote } from 'ng2-summernote/ng2-summernote';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.sass']
+})
+export class HomeComponent {
+
+  constructor(summernote: Ng2Summernote) {
+    summernote.lang = 'de-DE';
+    summernote.airMode = true;
+   }
+
+  say_hello(){
+    alert('Hello World')
+  }
+
+}
+------------------------------------------------------------------
+
+(home.component.html)
+------------------------------------------------------------------
+    <div class="section ribbon white-ribbon center">
+  <h2>
+    Welcome
+  </h2>
+
+  <button  (click)="say_hello()" class="btn waves-effect btn-large red darken-2" type="submit" name="action">HELLO
+    <i class="material-icons right">language</i>
+  </button>
+
+</div>
+
+<ng2-summernote></ng2-summernote>
+
+------------------------------------------------------------------
+
+

@@ -1,0 +1,31 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+	<li><a routerLink="/dashboard">Übersicht</a></li>
+	<li><a routerLink="/product/1">Produkt 1</a></li>
+	<li><a routerLink="/product/2">Produkt 2</a></li>
+</ul>
+
+<!-- Navbar -->
+<div class="navbar-fixed">
+	<nav class="navbar-material blue-grey lighten-1">
+		<div class="nav-wrapper">
+			<a routerLink="/dashboard" class="left brand-logo"><img src="../assets/images/logo_symphony_hi-res.png"></a>
+      <!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+			<ul class="right hide-on-med-and-down">
+				<li><a class="dropdown-button" data-activates="dropdown1">Produkte<i class="material-icons right">arrow_drop_down</i></a></li>
+				<li><a routerLink="/media">Medienverwaltung</a></li>
+				<li><a routerLink="/account">Konto</a></li>
+			</ul>
+      <!--<ul class="side-nav" id="mobile-demo">-->
+      <ul class="right hide-on-large-only">
+        <li><a routerLink="/dashboard"><i class="material-icons">view_module</i></a></li>
+				<li><a routerLink="/media"><i class="material-icons">perm_media</i></a></li>
+				<li><a routerLink="/account"><i class="material-icons">perm_identity</i></a></li>
+      </ul>
+		</div>
+	</nav>
+</div>
+
+<div class="container">
+		<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,13 @@
+<h1 class="center-align">{{title}}</h1>
+<section class="flex-container">
+	<div class="flex-item" *ngFor="let product of data">
+		<div class="card hoverable">
+			<div class="card-image">
+				<img src="../../assets/images/product_dummyimage.png">
+			</div>
+			<div class="card-content">
+				<p>Product {{product.id}}</p>
+			</div>
+		</div>
+	</div>
+</section>

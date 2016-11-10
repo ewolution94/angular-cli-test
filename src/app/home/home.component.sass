@@ -1,0 +1,21 @@
+@import "../../color_palette"
+
+#index-banner
+  background-color: $less-dark-grey
+  color: $raw-pale-grey
+
+
+
+.input-field
+
+  input[type=text]
+    &:focus
+      + label
+        color: #288AE2
+      border-bottom: 1px solid #288AE2
+      box-shadow: 0 1px 0 0 #288AE2
+    &.valid, &.invalid
+      border-bottom: 1px solid #288AE2
+      box-shadow: 0 1px 0 0 #288AE2
+  .prefix.active
+    color: #288AE2

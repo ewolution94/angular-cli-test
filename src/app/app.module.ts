@@ -12,6 +12,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { AccountComponent } from './account/account.component';
 
 import { ProductService } from './shared/product.service';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProductService } from './shared/product.service';
     MediaComponent,
     ProductDetailComponent,
     AccountComponent,
+    EditorComponent,
   ],
   imports: [
     MaterializeModule,
